@@ -1,24 +1,36 @@
 {
-  "id": "mingming",
-  "nome": "Mingming",
-  "nomeCompleto": "Kanyakorn Namboonruang",
-  "apelido": "Mingming (มิ้งมิ้ง)",
-  "nascimento": "",
-  "agencia": "",
-  "cor": "azul",
   "foto": "",
-  "bio": "(provisório) Mingming é atriz tailandesa e uma das protagonistas de Juliet & Juliet, onde vive uma das herdeiras de famílias rivais. Escreva aqui um texto curto sobre ela: como começou, o que marcou a carreira e o que os fãs mais amam nela.",
+  "cor": "azul",
+  "bio": "MingMing (em tailandês: หมิงหมิง; em chinês: 敏敏) é uma cantora tailandesa da gravadora OPEN LABEL . Ela é integrante do grupo feminino MINDY e foi integrante do Celeste .",
+  "nascimento": "2006-12-27",
+  "agencia": "Open Label",
+  "nome": "Mingming",
   "curiosidades": [
     {
-      "texto": "(provisório) Signo, hobby, comida favorita…"
+      "texto": "Ela gosta de esportes como vôlei, basquete, atletismo e futebol. "
     },
     {
-      "texto": "(provisório) Um fato marcante de bastidores"
+      "texto": "Ela canta, dança e pratica cheerleading desde o ensino fundamental."
     },
     {
-      "texto": "(provisório) Algo que ela sempre faz nas lives"
+      "texto": "Em 2020, ela ganhou o primeiro lugar em uma competição regional de ciências. "
+    },
+    {
+      "texto": "Ela é fã do grupo masculino coreano ENHYPEN ."
+    },
+    {
+      "texto": "Ela fala tailandês e inglês. "
+    },
+    {
+      "texto": "Sua cor favorita é o vermelho carmesim."
+    },
+    {
+      "texto": "Seus animais favoritos são os cães."
     }
   ],
+  "id": "mingming",
+  "nomeCompleto": "Kanyakorn Namboonruang (กันยากร นามบุญเรือง)",
+  "apelido": "MingMing (หมิงหมิง)",
   "redes": [
     {
       "rede": "tiktok",
