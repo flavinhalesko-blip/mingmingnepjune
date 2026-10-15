@@ -1,0 +1,27 @@
+{
+  "titulo": "Juliet & Juliet",
+  "tituloOriginal": "จูเลียต & จูเลียต",
+  "sinopse": "Uma releitura moderna de Romeu e Julieta: duas jovens herdeiras de famílias rivais e influentes foram o primeiro amor uma da outra na infância, até serem separadas. Anos depois se reencontram, e cada uma precisa decidir entre as expectativas da família e um amor que ninguém ao redor aprovaria.",
+  "emissora": "one31",
+  "estreia": "2026-09-05",
+  "diaSemana": "sábado",
+  "horarioTailandia": "20:30",
+  "episodios": 8,
+  "linkAssistir": "https://www.youtube.com/@one31",
+  "linkTrailer": "",
+  "producao": "The One Enterprise · Open Label · GINGERx Studio",
+  "personagens": [
+    {
+      "atriz": "Mingming",
+      "papel": "(provisório) nome da personagem",
+      "cor": "azul"
+    },
+    {
+      "atriz": "Nepjune",
+      "papel": "(provisório) nome da personagem",
+      "cor": "rosa"
+    }
+  ],
+  "capa": "/img/fotos/poster-juliet.jpg",
+  "capaTemTitulo": true
+}

@@ -1,0 +1,42 @@
+{
+  "id": "mingming",
+  "nome": "Mingming",
+  "nomeCompleto": "Kanyakorn Namboonruang",
+  "apelido": "Mingming (มิ้งมิ้ง)",
+  "nascimento": "",
+  "agencia": "",
+  "cor": "azul",
+  "foto": "",
+  "bio": "(provisório) Mingming é atriz tailandesa e uma das protagonistas de Juliet & Juliet, onde vive uma das herdeiras de famílias rivais. Escreva aqui um texto curto sobre ela: como começou, o que marcou a carreira e o que os fãs mais amam nela.",
+  "curiosidades": [
+    {
+      "texto": "(provisório) Signo, hobby, comida favorita…"
+    },
+    {
+      "texto": "(provisório) Um fato marcante de bastidores"
+    },
+    {
+      "texto": "(provisório) Algo que ela sempre faz nas lives"
+    }
+  ],
+  "redes": [
+    {
+      "rede": "tiktok",
+      "usuario": "@mingkanyas",
+      "url": "https://www.tiktok.com/@mingkanyas",
+      "descricao": "vídeos e publicações"
+    },
+    {
+      "rede": "instagram",
+      "usuario": "@mingkanyas",
+      "url": "https://www.instagram.com/mingkanyas",
+      "descricao": "fotos e stories"
+    },
+    {
+      "rede": "x",
+      "usuario": "@mingkanyas",
+      "url": "https://x.com/mingkanyas",
+      "descricao": "novidades e atualizações"
+    }
+  ]
+}

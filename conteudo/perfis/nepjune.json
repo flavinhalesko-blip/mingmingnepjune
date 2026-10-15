@@ -1,0 +1,42 @@
+{
+  "id": "nepjune",
+  "nome": "Nepjune",
+  "nomeCompleto": "Nutkitta Poonsukwattana",
+  "apelido": "Nepjune (เนปจูน)",
+  "nascimento": "2004-09-24",
+  "agencia": "Open Label (The One Enterprise)",
+  "cor": "rosa",
+  "foto": "",
+  "bio": "(provisório) Nepjune é atriz tailandesa da Open Label. Já esteve em I Will Knock You (2022), no filme Host (2025) e participou de House 31 (2026). Em Juliet & Juliet vive a outra Juliet, ao lado de Mingming. Substitua por um texto seu.",
+  "curiosidades": [
+    {
+      "texto": "(provisório) Signo, hobby, comida favorita…"
+    },
+    {
+      "texto": "(provisório) Um fato marcante de bastidores"
+    },
+    {
+      "texto": "(provisório) Algo que ela sempre faz nas lives"
+    }
+  ],
+  "redes": [
+    {
+      "rede": "tiktok",
+      "usuario": "@nepjuneys",
+      "url": "https://www.tiktok.com/@nepjuneys",
+      "descricao": "vídeos e publicações"
+    },
+    {
+      "rede": "instagram",
+      "usuario": "@nepjuneys",
+      "url": "https://www.instagram.com/nepjuneys",
+      "descricao": "fotos e stories"
+    },
+    {
+      "rede": "x",
+      "usuario": "@nepjuneys",
+      "url": "https://x.com/nepjuneys",
+      "descricao": "novidades e atualizações"
+    }
+  ]
+}

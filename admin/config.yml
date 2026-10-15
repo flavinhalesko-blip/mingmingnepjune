@@ -1,0 +1,223 @@
+# Configuração do painel (Decap CMS)
+backend:
+  name: git-gateway
+  branch: main            # troque para "master" se o seu repositório usar esse nome
+
+# Fluxo de aprovação: Rascunho → Em revisão → Pronto → Publicar
+publish_mode: editorial_workflow
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+locale: "pt"
+site_url: "https://portalmmnp.netlify.app"
+display_url: "https://portalmmnp.netlify.app"
+logo_url: "/img/avatar.jpg"
+
+collections:
+
+  # ---------- NOTÍCIAS ----------
+  - name: "noticias"
+    label: "Notícias"
+    label_singular: "Notícia"
+    description: "Mural de notícias. As mais novas aparecem primeiro no site."
+    folder: "conteudo/noticias"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{data}}-{{slug}}"
+    summary: "{{data}} · {{titulo}}"
+    sortable_fields: ["data", "titulo"]
+    fields:
+      - { label: "Data", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, picker_utc: false }
+      - label: "Categoria"
+        name: "tag"
+        widget: "select"
+        default: "geral"
+        options:
+          - { label: "🩵 Mingming", value: "mingming" }
+          - { label: "🩷 Nepjune", value: "nepjune" }
+          - { label: "📺 Série", value: "serie" }
+          - { label: "✨ Geral", value: "geral" }
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Texto", name: "texto", widget: "text", hint: "Resumo curto do que aconteceu." }
+      - { label: "Link (opcional)", name: "link", widget: "string", required: false, hint: "Link do post, vídeo ou matéria." }
+
+  # ---------- EDITS ----------
+  - name: "edits"
+    label: "Edits dos fãs"
+    label_singular: "Edit"
+    description: "Galeria de edits. Para aprovar um edit enviado pelo formulário, crie aqui com os dados dele."
+    folder: "conteudo/edits"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{data}}-{{slug}}"
+    summary: "{{titulo}} ({{autor}})"
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Quem fez (@)", name: "autor", widget: "string" }
+      - label: "Plataforma"
+        name: "plataforma"
+        widget: "select"
+        default: "tiktok"
+        options:
+          - { label: "TikTok", value: "tiktok" }
+          - { label: "YouTube", value: "youtube" }
+          - { label: "X (Twitter)", value: "x" }
+          - { label: "Instagram", value: "instagram" }
+      - { label: "Link do edit", name: "url", widget: "string" }
+      - { label: "Capa (opcional)", name: "capa", widget: "image", required: false, hint: "Imagem de capa. Se deixar vazio, o site usa um fundo colorido." }
+      - { label: "Data", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, picker_utc: false }
+
+  # ---------- PERFIS ----------
+  - name: "perfis"
+    label: "Perfis (quem são elas)"
+    description: "Bio, ficha, curiosidades e redes de cada uma."
+    files:
+      - name: "mingming"
+        label: "Mingming"
+        file: "conteudo/perfis/mingming.json"
+        fields:
+          - { label: "ID (não mexer)", name: "id", widget: "hidden", default: "mingming" }
+          - { label: "Cor (não mexer)", name: "cor", widget: "hidden", default: "azul" }
+          - { label: "Nome", name: "nome", widget: "string" }
+          - { label: "Nome completo", name: "nomeCompleto", widget: "string", required: false }
+          - { label: "Apelido / nome em tailandês", name: "apelido", widget: "string", required: false }
+          - { label: "Foto", name: "foto", widget: "image", required: false, hint: "Foto quadrada fica melhor. Se vazio, aparece a inicial." }
+          - { label: "Data de nascimento", name: "nascimento", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, picker_utc: false, required: false, hint: "O site calcula idade e signo sozinho." }
+          - { label: "Agência", name: "agencia", widget: "string", required: false }
+          - { label: "Bio", name: "bio", widget: "text" }
+          - label: "Curiosidades"
+            name: "curiosidades"
+            widget: "list"
+            required: false
+            summary: "{{fields.texto}}"
+            fields:
+              - { label: "Curiosidade", name: "texto", widget: "string" }
+          - label: "Redes sociais"
+            name: "redes"
+            widget: "list"
+            summary: "{{fields.usuario}} ({{fields.rede}})"
+            fields:
+              - label: "Rede"
+                name: "rede"
+                widget: "select"
+                options:
+                  - { label: "TikTok", value: "tiktok" }
+                  - { label: "Instagram", value: "instagram" }
+                  - { label: "X (Twitter)", value: "x" }
+                  - { label: "Pinterest", value: "pinterest" }
+                  - { label: "YouTube", value: "youtube" }
+                  - { label: "Outro", value: "outro" }
+              - { label: "Usuário (@)", name: "usuario", widget: "string" }
+              - { label: "Link", name: "url", widget: "string" }
+              - { label: "Descrição curta", name: "descricao", widget: "string", required: false }
+      - name: "nepjune"
+        label: "Nepjune"
+        file: "conteudo/perfis/nepjune.json"
+        fields:
+          - { label: "ID (não mexer)", name: "id", widget: "hidden", default: "nepjune" }
+          - { label: "Cor (não mexer)", name: "cor", widget: "hidden", default: "rosa" }
+          - { label: "Nome", name: "nome", widget: "string" }
+          - { label: "Nome completo", name: "nomeCompleto", widget: "string", required: false }
+          - { label: "Apelido / nome em tailandês", name: "apelido", widget: "string", required: false }
+          - { label: "Foto", name: "foto", widget: "image", required: false, hint: "Foto quadrada fica melhor. Se vazio, aparece a inicial." }
+          - { label: "Data de nascimento", name: "nascimento", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, picker_utc: false, required: false, hint: "O site calcula idade e signo sozinho." }
+          - { label: "Agência", name: "agencia", widget: "string", required: false }
+          - { label: "Bio", name: "bio", widget: "text" }
+          - label: "Curiosidades"
+            name: "curiosidades"
+            widget: "list"
+            required: false
+            summary: "{{fields.texto}}"
+            fields:
+              - { label: "Curiosidade", name: "texto", widget: "string" }
+          - label: "Redes sociais"
+            name: "redes"
+            widget: "list"
+            summary: "{{fields.usuario}} ({{fields.rede}})"
+            fields:
+              - label: "Rede"
+                name: "rede"
+                widget: "select"
+                options:
+                  - { label: "TikTok", value: "tiktok" }
+                  - { label: "Instagram", value: "instagram" }
+                  - { label: "X (Twitter)", value: "x" }
+                  - { label: "Pinterest", value: "pinterest" }
+                  - { label: "YouTube", value: "youtube" }
+                  - { label: "Outro", value: "outro" }
+              - { label: "Usuário (@)", name: "usuario", widget: "string" }
+              - { label: "Link", name: "url", widget: "string" }
+              - { label: "Descrição curta", name: "descricao", widget: "string", required: false }
+
+  # ---------- SÉRIE / LINKS / SITE ----------
+  - name: "config"
+    label: "Série, links e site"
+    files:
+      - name: "serie"
+        label: "Série (Juliet & Juliet)"
+        file: "conteudo/serie.json"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Título original", name: "tituloOriginal", widget: "string", required: false }
+          - { label: "Sinopse", name: "sinopse", widget: "text" }
+          - { label: "Foto de fundo do pôster (opcional)", name: "capa", widget: "image", required: false }
+          - { label: "A foto já é o pôster oficial (com o título escrito)?", name: "capaTemTitulo", widget: "boolean", default: false, required: false, hint: "Ligado: o site não escreve o nome da série por cima da foto." }
+          - { label: "Emissora", name: "emissora", widget: "string" }
+          - { label: "Data de estreia (1º episódio)", name: "estreia", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, picker_utc: false }
+          - { label: "Dia da semana", name: "diaSemana", widget: "string", default: "sábado" }
+          - { label: "Horário na Tailândia", name: "horarioTailandia", widget: "string", default: "20:30", pattern: ["^\\d{1,2}:\\d{2}$", "Use o formato 20:30"] }
+          - { label: "Número de episódios", name: "episodios", widget: "number", value_type: "int", min: 1 }
+          - { label: "Link para assistir", name: "linkAssistir", widget: "string" }
+          - { label: "Link do trailer (opcional)", name: "linkTrailer", widget: "string", required: false }
+          - { label: "Produção", name: "producao", widget: "string", required: false }
+          - label: "Personagens"
+            name: "personagens"
+            widget: "list"
+            summary: "{{fields.atriz}}: {{fields.papel}}"
+            fields:
+              - { label: "Atriz", name: "atriz", widget: "string" }
+              - { label: "Personagem", name: "papel", widget: "string" }
+              - { label: "Cor", name: "cor", widget: "select", options: [{ label: "Azul", value: "azul" }, { label: "Rosa", value: "rosa" }] }
+      - name: "juntas"
+        label: "Links juntas & fandom"
+        file: "conteudo/juntas.json"
+        fields:
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            summary: "{{fields.usuario}}"
+            fields:
+              - label: "Rede"
+                name: "rede"
+                widget: "select"
+                options:
+                  - { label: "Pinterest", value: "pinterest" }
+                  - { label: "YouTube", value: "youtube" }
+                  - { label: "TikTok", value: "tiktok" }
+                  - { label: "Instagram", value: "instagram" }
+                  - { label: "X (Twitter)", value: "x" }
+                  - { label: "Outro", value: "outro" }
+              - { label: "Nome que aparece", name: "usuario", widget: "string" }
+              - { label: "Link", name: "url", widget: "string" }
+              - { label: "Descrição curta", name: "descricao", widget: "string", required: false }
+      - name: "site"
+        label: "Site (geral)"
+        file: "conteudo/site.json"
+        fields:
+          - { label: "Nome do site", name: "nome", widget: "string" }
+          - { label: "Slogan", name: "slogan", widget: "string" }
+          - { label: "Endereço do site", name: "url", widget: "string", hint: "Usado nos botões de compartilhar." }
+          - { label: "Foto pequena (menu)", name: "foto", widget: "image", hint: "Foto quadrada, aparece no menu do topo." }
+          - label: "Faixa de fotos do início"
+            name: "fotos"
+            widget: "list"
+            summary: "{{fields.legenda}}"
+            hint: "De 3 a 6 fotos ficam bem. Arraste para mudar a ordem."
+            fields:
+              - { label: "Imagem", name: "imagem", widget: "image" }
+              - { label: "Legenda (opcional)", name: "legenda", widget: "string", required: false }
+          - { label: "Texto de introdução", name: "intro", widget: "text" }
+          - { label: "Aviso do rodapé", name: "aviso", widget: "string" }

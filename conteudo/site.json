@@ -1,0 +1,26 @@
+{
+  "nome": "MingmingNepjune",
+  "slogan": "Portal de fãs de Mingming e Nepjune",
+  "url": "https://portalmmnp.netlify.app",
+  "foto": "/img/avatar.jpg",
+  "intro": "Tudo sobre as duas em um só lugar: redes sociais oficiais, a série Juliet & Juliet, edits dos fãs e um mural com as novidades do dia.",
+  "aviso": "Portal feito por fãs, para fãs. Não tem ligação oficial com as atrizes, suas agências ou o one31. ♡",
+  "fotos": [
+    {
+      "imagem": "/img/fotos/01-peixes.jpg",
+      "legenda": ""
+    },
+    {
+      "imagem": "/img/fotos/02-shh.jpg",
+      "legenda": ""
+    },
+    {
+      "imagem": "/img/fotos/03-garras.jpg",
+      "legenda": ""
+    },
+    {
+      "imagem": "/img/fotos/04-sol.jpg",
+      "legenda": ""
+    }
+  ]
+}
